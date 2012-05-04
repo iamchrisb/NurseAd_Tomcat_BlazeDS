@@ -30,3 +30,33 @@ INFO: Starting ProtocolHandler ["http-apr-8080"]
 INFO: Starting ProtocolHandler ["ajp-apr-8009"]
 04.05.2012 16:58:04 org.apache.catalina.startup.Catalina start
 INFO: Server startup in 1449 ms
+04.05.2012 17:21:32 org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0_32\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;.
+04.05.2012 17:21:33 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+04.05.2012 17:21:33 org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+04.05.2012 17:21:33 org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1550 ms
+04.05.2012 17:21:33 org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+04.05.2012 17:21:33 org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.21
+04.05.2012 17:21:33 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory blazeds
+04.05.2012 17:21:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+04.05.2012 17:21:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+04.05.2012 17:21:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory host-manager
+04.05.2012 17:21:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory manager
+04.05.2012 17:21:35 org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+04.05.2012 17:21:35 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+04.05.2012 17:21:35 org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+04.05.2012 17:21:35 org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2083 ms

@@ -25,11 +25,6 @@ public class EmployeeService {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
-
-		// EmployeeVO e = new EmployeeVO();
-		// e.setFirstname("Louise");
-		// e.setName("Wernick");
-		// e.setPersonalnumber("3289342");
 		return e;
 	}
 
