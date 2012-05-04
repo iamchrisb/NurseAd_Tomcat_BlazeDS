@@ -12,7 +12,13 @@
     
 	<destination id="patientservice">
         <properties>
-            <source>service.PatientService</source>
+            <source>mme2.nursead.service.PatientService</source>
+        </properties>
+    </destination>
+    
+    <destination id="employeeservice">
+        <properties>
+            <source>mme2.nursead.service.EmployeeService</source>
         </properties>
     </destination>
 

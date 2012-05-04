@@ -1,7 +1,17 @@
 package mme2.nursead.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class PatientVO {
 
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int id;
+	
 	private String name;
 
 	public String getName() {
@@ -11,4 +21,11 @@ public class PatientVO {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	@Override
+	public String toString() {
+		return "PatientVO [id=" + id + ", name=" + name + "]";
+	}
+	
+	
 }
