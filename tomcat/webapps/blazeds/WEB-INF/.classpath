@@ -11,6 +11,9 @@
 	<classpathentry kind="lib" path="lib/flex-messaging-proxy.jar"/>
 	<classpathentry kind="lib" path="lib/flex-messaging-remoting.jar"/>
 	<classpathentry kind="lib" path="lib/flex-rds-server.jar"/>
+	<classpathentry kind="lib" path="lib/derby.jar"/>
+	<classpathentry kind="lib" path="lib/eclipselink.jar"/>
+	<classpathentry kind="lib" path="lib/javax.persistence_2.0.3.v201010191057.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="classes"/>
 </classpath>
