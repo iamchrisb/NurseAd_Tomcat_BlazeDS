@@ -15,6 +15,8 @@ public class EmployeeVO {
 	private String name;
 	private String firstname;
 	private String personalnumber;
+	private String username;
+	private String password;
 	
 	
 	public String getName() {
@@ -35,10 +37,23 @@ public class EmployeeVO {
 	public void setPersonalnumber(String personalnumber) {
 		this.personalnumber = personalnumber;
 	}
+		
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	@Override
 	public String toString() {
 		return "EmployeeVO [id=" + id + ", name=" + name + ", firstname="
-				+ firstname + ", personalnumber=" + personalnumber + "]";
+				+ firstname + ", personalnumber=" + personalnumber
+				+ ", username=" + username + ", password=" + password + "]";
 	}
-
 }

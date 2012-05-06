@@ -17,6 +17,7 @@ import com.adobe.fiber.core.model_internal;
 
 public class EmployeeVO extends _Super_EmployeeVO
 {
+	
     /** 
      * DO NOT MODIFY THIS STATIC INITIALIZER - IT IS NECESSARY
      * FOR PROPERLY SETTING UP THE REMOTE CLASS ALIAS FOR THIS CLASS

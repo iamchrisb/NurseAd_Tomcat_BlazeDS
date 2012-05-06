@@ -14,20 +14,25 @@
 			import mx.rpc.events.ResultEvent;
 			
 			import services.Employeeservice;
+			
+			import valueObjects.EmployeeVO;
 			private var em:Employeeservice = new Employeeservice();
 			private var cr:CallResponder = new CallResponder();
 			
 			public function start():void {
-				
-				Alert.show("hallo");
+			
 				cr.addEventListener(ResultEvent.RESULT , crevent );
-				cr.token = em.getEmployeeByName("Louise");
+				cr.token = em.getName();
+				//cr.token = em.getEmployeeByName("Louise");
+				
 			}
 			
 			protected function crevent(event:ResultEvent):void
 			{
+				var e:String = cr.lastResult as String;
+				//Alert.show("hal");
 				
-				Alert.show(cr.lastResult.toString());
+				Alert.show(e);
 			}
 			
 		]]>

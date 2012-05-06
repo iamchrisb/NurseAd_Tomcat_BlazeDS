@@ -34,7 +34,25 @@
       </annotation>
       <parameter name="arg0" type="EmployeeVO"/>
     </function>
-    <function name="getEmployeeByName" return-type="EmployeeVO">
+    <function name="getName" return-type="string">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="returnType">string</item>
+      </annotation>
+    </function>
+    <function name="checkEmployee" return-type="boolean">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">EmployeeVO</item>
+        <item name="returnType">boolean</item>
+      </annotation>
+      <parameter name="arg0" type="EmployeeVO"/>
+    </function>
+    <function name="getEmployeeByFristname" return-type="EmployeeVO">
       <annotation name="analyze group">
         <item name="analyzed">true</item>
       </annotation>
@@ -54,13 +72,15 @@
       <item name="IncludeRemoteClass">nonempty</item>
     </annotation>
     <annotation name="service Group">
-      <item name="service">Employeeservice</item>
+      <item name="service">Employeeservice,Dummy</item>
     </annotation>
     <annotation name="ActionScriptGeneration">
       <item name="Package">valueObjects</item>
     </annotation>
+    <property name="username" type="string"/>
     <property name="personalnumber" type="string"/>
     <property name="name" type="string"/>
     <property name="firstname" type="string"/>
+    <property name="password" type="string"/>
   </entity>
 </model>

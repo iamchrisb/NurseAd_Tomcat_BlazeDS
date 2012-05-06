@@ -20,14 +20,14 @@ internal class _EmployeeVOEntityMetadata extends com.adobe.fiber.valueobjects.Ab
 {
     private static var emptyArray:Array = new Array();
 
-    model_internal static var allProperties:Array = new Array("personalnumber", "name", "firstname");
+    model_internal static var allProperties:Array = new Array("username", "personalnumber", "name", "firstname", "password");
     model_internal static var allAssociationProperties:Array = new Array();
     model_internal static var allRequiredProperties:Array = new Array();
-    model_internal static var allAlwaysAvailableProperties:Array = new Array("personalnumber", "name", "firstname");
+    model_internal static var allAlwaysAvailableProperties:Array = new Array("username", "personalnumber", "name", "firstname", "password");
     model_internal static var guardedProperties:Array = new Array();
-    model_internal static var dataProperties:Array = new Array("personalnumber", "name", "firstname");
+    model_internal static var dataProperties:Array = new Array("username", "personalnumber", "name", "firstname", "password");
     model_internal static var sourceProperties:Array = emptyArray
-    model_internal static var nonDerivedProperties:Array = new Array("personalnumber", "name", "firstname");
+    model_internal static var nonDerivedProperties:Array = new Array("username", "personalnumber", "name", "firstname", "password");
     model_internal static var derivedProperties:Array = new Array();
     model_internal static var collectionProperties:Array = new Array();
     model_internal static var collectionBaseMap:Object;
@@ -47,9 +47,11 @@ internal class _EmployeeVOEntityMetadata extends com.adobe.fiber.valueobjects.Ab
         {
             // dependents map
             model_internal::dependentsOnMap = new Object();
+            model_internal::dependentsOnMap["username"] = new Array();
             model_internal::dependentsOnMap["personalnumber"] = new Array();
             model_internal::dependentsOnMap["name"] = new Array();
             model_internal::dependentsOnMap["firstname"] = new Array();
+            model_internal::dependentsOnMap["password"] = new Array();
 
             // collection base map
             model_internal::collectionBaseMap = new Object();
@@ -57,9 +59,11 @@ internal class _EmployeeVOEntityMetadata extends com.adobe.fiber.valueobjects.Ab
 
         // Property type Map
         model_internal::propertyTypeMap = new Object();
+        model_internal::propertyTypeMap["username"] = "String";
         model_internal::propertyTypeMap["personalnumber"] = "String";
         model_internal::propertyTypeMap["name"] = "String";
         model_internal::propertyTypeMap["firstname"] = "String";
+        model_internal::propertyTypeMap["password"] = "String";
 
         model_internal::_instance = value;
     }
@@ -289,6 +293,12 @@ internal class _EmployeeVOEntityMetadata extends com.adobe.fiber.valueobjects.Ab
     }
 
     [Bindable(event="propertyChange")]
+    public function get isUsernameAvailable():Boolean
+    {
+        return true;
+    }
+
+    [Bindable(event="propertyChange")]
     public function get isPersonalnumberAvailable():Boolean
     {
         return true;
@@ -306,6 +316,12 @@ internal class _EmployeeVOEntityMetadata extends com.adobe.fiber.valueobjects.Ab
         return true;
     }
 
+    [Bindable(event="propertyChange")]
+    public function get isPasswordAvailable():Boolean
+    {
+        return true;
+    }
+
 
     /**
      * derived property recalculation
@@ -314,6 +330,12 @@ internal class _EmployeeVOEntityMetadata extends com.adobe.fiber.valueobjects.Ab
     model_internal function fireChangeEvent(propertyName:String, oldValue:Object, newValue:Object):void
     {
         this.dispatchEvent(mx.events.PropertyChangeEvent.createUpdateEvent(this, propertyName, oldValue, newValue));
+    }
+
+    [Bindable(event="propertyChange")]   
+    public function get usernameStyle():com.adobe.fiber.styles.Style
+    {
+        return model_internal::_nullStyle;
     }
 
     [Bindable(event="propertyChange")]   
@@ -330,6 +352,12 @@ internal class _EmployeeVOEntityMetadata extends com.adobe.fiber.valueobjects.Ab
 
     [Bindable(event="propertyChange")]   
     public function get firstnameStyle():com.adobe.fiber.styles.Style
+    {
+        return model_internal::_nullStyle;
+    }
+
+    [Bindable(event="propertyChange")]   
+    public function get passwordStyle():com.adobe.fiber.styles.Style
     {
         return model_internal::_nullStyle;
     }

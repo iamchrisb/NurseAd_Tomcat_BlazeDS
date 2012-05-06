@@ -58,9 +58,11 @@ public class _Super_EmployeeVO extends flash.events.EventDispatcher implements c
     /**
      * properties
      */
+    private var _internal_username : String;
     private var _internal_personalnumber : String;
     private var _internal_name : String;
     private var _internal_firstname : String;
+    private var _internal_password : String;
 
     private static var emptyArray:Array = new Array();
 
@@ -85,6 +87,12 @@ public class _Super_EmployeeVO extends flash.events.EventDispatcher implements c
      */
 
     [Bindable(event="propertyChange")]
+    public function get username() : String
+    {
+        return _internal_username;
+    }
+
+    [Bindable(event="propertyChange")]
     public function get personalnumber() : String
     {
         return _internal_personalnumber;
@@ -102,6 +110,12 @@ public class _Super_EmployeeVO extends flash.events.EventDispatcher implements c
         return _internal_firstname;
     }
 
+    [Bindable(event="propertyChange")]
+    public function get password() : String
+    {
+        return _internal_password;
+    }
+
     public function clearAssociations() : void
     {
     }
@@ -109,6 +123,16 @@ public class _Super_EmployeeVO extends flash.events.EventDispatcher implements c
     /**
      * data/source property setters
      */
+
+    public function set username(value:String) : void
+    {
+        var oldValue:String = _internal_username;
+        if (oldValue !== value)
+        {
+            _internal_username = value;
+            this.dispatchEvent(mx.events.PropertyChangeEvent.createUpdateEvent(this, "username", oldValue, _internal_username));
+        }
+    }
 
     public function set personalnumber(value:String) : void
     {
@@ -137,6 +161,16 @@ public class _Super_EmployeeVO extends flash.events.EventDispatcher implements c
         {
             _internal_firstname = value;
             this.dispatchEvent(mx.events.PropertyChangeEvent.createUpdateEvent(this, "firstname", oldValue, _internal_firstname));
+        }
+    }
+
+    public function set password(value:String) : void
+    {
+        var oldValue:String = _internal_password;
+        if (oldValue !== value)
+        {
+            _internal_password = value;
+            this.dispatchEvent(mx.events.PropertyChangeEvent.createUpdateEvent(this, "password", oldValue, _internal_password));
         }
     }
 

@@ -35,9 +35,15 @@ internal class _Super_Employeeservice extends com.adobe.fiber.services.wrapper.R
         operations["printEmployees"] = operation;
         operation = new mx.rpc.remoting.Operation(null, "insertEmployee");
         operations["insertEmployee"] = operation;
-        operation = new mx.rpc.remoting.Operation(null, "getEmployeeByName");
+        operation = new mx.rpc.remoting.Operation(null, "getName");
+         operation.resultType = String;
+        operations["getName"] = operation;
+        operation = new mx.rpc.remoting.Operation(null, "checkEmployee");
+         operation.resultType = Boolean;
+        operations["checkEmployee"] = operation;
+        operation = new mx.rpc.remoting.Operation(null, "getEmployeeByFristname");
          operation.resultType = valueObjects.EmployeeVO;
-        operations["getEmployeeByName"] = operation;
+        operations["getEmployeeByFristname"] = operation;
 
         _serviceControl.operations = operations;
         _serviceControl.convertResultHandler = com.adobe.serializers.utility.TypeUtility.convertResultHandler;
@@ -93,7 +99,7 @@ internal class _Super_Employeeservice extends com.adobe.fiber.services.wrapper.R
     }
      
     /**
-      * This method is a generated wrapper used to call the 'getEmployeeByName' operation. It returns an mx.rpc.AsyncToken whose 
+      * This method is a generated wrapper used to call the 'getName' operation. It returns an mx.rpc.AsyncToken whose 
       * result property will be populated with the result of the operation when the server response is received. 
       * To use this result from MXML code, define a CallResponder component and assign its token property to this method's return value. 
       * You can then bind to CallResponder.lastResult or listen for the CallResponder.result or fault events.
@@ -103,9 +109,45 @@ internal class _Super_Employeeservice extends com.adobe.fiber.services.wrapper.R
       *
       * @return an mx.rpc.AsyncToken whose result property will be populated with the result of the operation when the server response is received.
       */
-    public function getEmployeeByName(arg0:String) : mx.rpc.AsyncToken
+    public function getName() : mx.rpc.AsyncToken
     {
-        var _internal_operation:mx.rpc.AbstractOperation = _serviceControl.getOperation("getEmployeeByName");
+        var _internal_operation:mx.rpc.AbstractOperation = _serviceControl.getOperation("getName");
+		var _internal_token:mx.rpc.AsyncToken = _internal_operation.send() ;
+        return _internal_token;
+    }
+     
+    /**
+      * This method is a generated wrapper used to call the 'checkEmployee' operation. It returns an mx.rpc.AsyncToken whose 
+      * result property will be populated with the result of the operation when the server response is received. 
+      * To use this result from MXML code, define a CallResponder component and assign its token property to this method's return value. 
+      * You can then bind to CallResponder.lastResult or listen for the CallResponder.result or fault events.
+      *
+      * @see mx.rpc.AsyncToken
+      * @see mx.rpc.CallResponder 
+      *
+      * @return an mx.rpc.AsyncToken whose result property will be populated with the result of the operation when the server response is received.
+      */
+    public function checkEmployee(arg0:valueObjects.EmployeeVO) : mx.rpc.AsyncToken
+    {
+        var _internal_operation:mx.rpc.AbstractOperation = _serviceControl.getOperation("checkEmployee");
+		var _internal_token:mx.rpc.AsyncToken = _internal_operation.send(arg0) ;
+        return _internal_token;
+    }
+     
+    /**
+      * This method is a generated wrapper used to call the 'getEmployeeByFristname' operation. It returns an mx.rpc.AsyncToken whose 
+      * result property will be populated with the result of the operation when the server response is received. 
+      * To use this result from MXML code, define a CallResponder component and assign its token property to this method's return value. 
+      * You can then bind to CallResponder.lastResult or listen for the CallResponder.result or fault events.
+      *
+      * @see mx.rpc.AsyncToken
+      * @see mx.rpc.CallResponder 
+      *
+      * @return an mx.rpc.AsyncToken whose result property will be populated with the result of the operation when the server response is received.
+      */
+    public function getEmployeeByFristname(arg0:String) : mx.rpc.AsyncToken
+    {
+        var _internal_operation:mx.rpc.AbstractOperation = _serviceControl.getOperation("getEmployeeByFristname");
 		var _internal_token:mx.rpc.AsyncToken = _internal_operation.send(arg0) ;
         return _internal_token;
     }

@@ -10,7 +10,7 @@ import mme2.nursead.system.PersistenceManager;
 
 public class EmployeeService {
 
-	public EmployeeVO getEmployeeByName(String s) {
+	public EmployeeVO getEmployeeByFristname(String s) {
 		EntityManager em = PersistenceManager.getInstance()
 				.createEntityManagerFactory().createEntityManager();
 
@@ -19,7 +19,7 @@ public class EmployeeService {
 		try {
 			em.getTransaction().begin();
 			e = (EmployeeVO) em
-					.createQuery("select a from EmployeeVO a WHERE a.name=?1")
+					.createQuery("select a from EmployeeVO a WHERE a.firstname=?1")
 					.setParameter(1, s).getSingleResult();
 			em.getTransaction().commit();
 		} catch (Exception ex) {
@@ -54,7 +54,23 @@ public class EmployeeService {
 		}
 		
 		em.close();
-
+	}
+	
+	public boolean checkEmployee(EmployeeVO e){
+		EntityManager em = PersistenceManager.getInstance().createEntityManagerFactory().createEntityManager();
+		
+		Query q = em.createQuery("Select m rom EmployeeVO m");
+		
+		List<EmployeeVO> emplist = q.getResultList();
+		for(EmployeeVO ev : emplist){
+			if(e.equals(ev)) return true;
+		}
+		return false;
+	}
+	
+	
+	public String getName(){
+		return "CHRIS";
 	}
 
 }
