@@ -1,0 +1,6 @@
+----------------------------------------------------------------
+2012-05-04 13:40:52.933 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.1.0 - (938214): instance a816c00e-0137-1814-e9c2-0000075a6148 
+on database directory D:\uni\projekte\GitRepositories\NurseAd_Tomcat_BlazeDS\tomcat\webapps\blazeds\WEB-INF\db   with class loader sun.misc.Launcher$AppClassLoader@53372a1a
+
+Database Class Loader started - derby.database.classpath=''
